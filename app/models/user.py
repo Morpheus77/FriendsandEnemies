@@ -22,7 +22,7 @@ class user(Model):
         data = {'id': 1}
         return self.db.get_one(query, data)
 
-    def create_user(self):
+    def create_user(self,user_info):
 		sql = "INSERT into users (name_first, name_last,  email) values(:frstname, :lstname, :email)"
 		data = {'frstname': 'name_first', 'lstname' : 'name_last' , 'frstname': 'name_first', 'email':'email'}
 		self.db.query_db(sql, data)
